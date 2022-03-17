@@ -2,11 +2,11 @@
 # Cyware CTIX
 
 Publisher: Cyware Labs  
-Connector Version: 1\.0\.1  
+Connector Version: 1\.0\.2  
 Product Vendor: Cyware Labs  
 Product Name: Cyware Threat Intel eXchange  
 Product Version Supported (regex): "\.\*"  
-Minimum Product Version: 4\.9\.39220  
+Minimum Product Version: 5\.1\.0  
 
 Cyware Threat Intel eXchange is an intelligent client\-server intelligence exchange that provides subscriber with full Threat Intel collection management from multiple internal and external sources
 
