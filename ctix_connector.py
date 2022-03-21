@@ -1,21 +1,33 @@
 # File: ctix_connector.py
 #
-# Licensed under Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)
+# Copyright (c) Cyware Corporation 2021-2022
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software distributed under
+# the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+# either express or implied. See the License for the specific language governing permissions
+# and limitations under the License.
+#
 
+import base64
+import hashlib
+import hmac
+import time
+import urllib.parse
 
 # Phantom App imports
 import phantom.app as phantom
-from phantom.base_connector import BaseConnector
-from phantom.action_result import ActionResult
-
+import requests
 # Imports local to this App
 import simplejson as json
-import base64
-import time
-import hashlib
-import hmac
-import requests
-import urllib.parse
+from phantom.action_result import ActionResult
+from phantom.base_connector import BaseConnector
+
 from ctix_consts import *
 
 
@@ -85,7 +97,7 @@ class CTIXConnector(BaseConnector):
 
         if method == "GET":
             try:
-                r = requests.get(target_url, verify=verify)
+                r = requests.get(target_url, verify=verify)  # nosemgrep: python.requests.best-practice.use-timeout.use-timeout
                 try:
                     rstatus = r.status_code
                     response_json = r.json()
@@ -315,13 +327,14 @@ class CTIXConnector(BaseConnector):
 if __name__ == '__main__':
 
     import sys
+
     import pudb
 
     pudb.set_trace()
 
     if (len(sys.argv) < 2):
         print("No test json specified as input")
-        exit(0)
+        sys.exit(0)
 
     with open(sys.argv[1]) as f:
         in_json = f.read()
@@ -333,4 +346,4 @@ if __name__ == '__main__':
         ret_val = connector.handle_action(json.dumps(in_json), None)
         print(json.dumps(json.loads(ret_val), indent=4))
 
-    exit(0)
+    sys.exit(0)
