@@ -1,16 +1,34 @@
 Splunk SOAR Cyware CTIX
-Copyright (c) Cyware Corporation 2021-2022
+Copyright (c) Cyware Corporation 2021-2025
 
-Third-party Software Attributions:
+Third Party Software Attributions:
 
-Library: requests
+Name: certifi
+Version: 2025.1.31
+Author: Kenneth Reitz
+License: MPL-2.0
+
+Name: chardet
+Version: 3.0.4
+Author: Daniel Blanchard
+License: LGPL
+
+Name: idna
+Version: 2.10
+Author: Kim Davies
+License: BSD-like
+
+Name: requests
 Version: 2.25.0
+Author: Kenneth Reitz
 License: Apache 2.0
-Kenneth Reitz
 
-Library: simplejson
+Name: simplejson
 Version: 3.17.2
-License: Academic 2.1
+Author: Bob Ippolito
+License: MIT License
+
+Name: urllib3
+Version: 1.26.20
+Author: Andrey Petrov
 License: MIT
-Copyright 2003-2004 Lawrence E
-Copyright 2006 Bob Ippolito
