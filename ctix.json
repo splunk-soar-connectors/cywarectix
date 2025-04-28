@@ -4,7 +4,7 @@
     "description": "Cyware Threat Intel eXchange is an intelligent client-server intelligence exchange that provides subscriber with full Threat Intel collection management from multiple internal and external sources",
     "type": "threat intel",
     "main_module": "ctix_connector.py",
-    "app_version": "1.0.2",
+    "app_version": "1.0.3",
     "min_phantom_version": "5.1.0",
     "product_vendor": "Cyware Labs",
     "product_name": "Cyware Threat Intel eXchange",
@@ -647,7 +647,7 @@
             "versions": "EQ(*)"
         }
     ],
-    "utctime_updated": "2022-01-07T20:36:41.000000Z",
+    "utctime_updated": "2025-04-28T19:42:05.801802Z",
     "pip39_dependencies": {
         "wheel": [
             {

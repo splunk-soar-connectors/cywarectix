@@ -1,7 +1,7 @@
 # Cyware CTIX
 
 Publisher: Cyware Labs \
-Connector Version: 1.0.2 \
+Connector Version: 1.0.3 \
 Product Vendor: Cyware Labs \
 Product Name: Cyware Threat Intel eXchange \
 Minimum Product Version: 5.1.0
